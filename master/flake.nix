@@ -1,5 +1,5 @@
 {
-  description = ''Circuit Design language made in Nim'';
+  description = ''Create circuits and printed circuit boards with nim!'';
 
   inputs.flakeNimbleLib.owner = "riinr";
   inputs.flakeNimbleLib.ref   = "master";
@@ -12,6 +12,14 @@
   inputs.src-nimcdl-master.owner = "endes123321";
   inputs.src-nimcdl-master.repo  = "nimcdl";
   inputs.src-nimcdl-master.type  = "gitlab";
+  
+  inputs."cascade".owner = "nim-nix-pkgs";
+  inputs."cascade".ref   = "master";
+  inputs."cascade".repo  = "cascade";
+  inputs."cascade".dir   = "v1_0_0";
+  inputs."cascade".type  = "github";
+  inputs."cascade".inputs.nixpkgs.follows = "nixpkgs";
+  inputs."cascade".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
