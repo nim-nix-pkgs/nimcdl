@@ -11,6 +11,7 @@
   inputs.src-nimcdl-master.ref   = "refs/heads/master";
   inputs.src-nimcdl-master.owner = "endes123321";
   inputs.src-nimcdl-master.repo  = "nimcdl";
+  inputs.src-nimcdl-master.dir   = "";
   inputs.src-nimcdl-master.type  = "gitlab";
   
   inputs."cascade".owner = "nim-nix-pkgs";
